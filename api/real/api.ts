@@ -6,6 +6,9 @@ export const api = {
 
         const allProducts = await axios.get(import.meta.env.VITE_GET_PRODUCTOS)
 
+        console.log(import.meta.env.VITE_GET_PRODUCTOS)
+        console.log(allProducts)
+
         const parsedProducts = allProducts.data.map((product:any)=>{
             return {
                 id: product.id,
